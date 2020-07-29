@@ -1,0 +1,161 @@
+.blogmusik {
+    height: 9px;
+    font-weight: 600;
+    font-style: normal;
+    text-align: right;
+    color: #261d40;
+}
+
+.download {
+    width: 70pz;
+    height: 9px;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    color: #432b87;
+    width: 110px;
+    height: 46px;
+    border-radius: 4px;
+    border: solid 2px #432b87;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    margin-right: 42px;
+}
+
+.nav {
+    padding: 3rem;
+}
+
+.play1 {
+    color: white;
+    background-color: #6cbb01;
+}
+
+.down {
+    color: white;
+    background-color: #6cbb01;
+}
+
+.about {
+    margin-top: 7rem;
+}
+
+.service {
+    padding: 200px;
+    text-align: center;
+}
+
+.hr {
+    height: 2px;
+    width: 36px;
+    background-color: #757575;
+}
+
+.dono {
+    margin-left: 65px;
+}
+
+.ceo {
+    margin-left: 65px;
+}
+
+.testimoni {
+    height: 528px;
+    background-color: #fafafa;
+    padding-top: 6rem;
+}
+
+.card {
+    box-shadow: 0px 10px 30px 0 rgba(67, 43, 135, 0.1);
+    ;
+}
+
+.circle {
+    margin-left: 475px;
+    opacity: 0.5;
+    color: #1d3954;
+}
+
+.circle1 {
+    color: #432b87;
+    margin-left: 150px;
+    margin-bottom: 15px;
+}
+
+.circle2 {
+    margin-left: -175px;
+    opacity: 0.5;
+    color: #1d3954;
+}
+
+.people {
+    background-color: #432b87;
+    border-radius: 50px;
+    color: white;
+    margin-left: 15rem;
+    position: absolute;
+}
+
+.new {
+    padding: 100px;
+}
+
+.hr1 {
+    width: 40px;
+    height: 2px;
+    background-color: #ff7800;
+    margin-top: 2rem;
+}
+
+.read {
+    color: #432b87;
+    font-weight: bold;
+}
+
+.p {
+    font-weight: 800;
+    color: white;
+    font-weight: 400;
+    padding: 2px;
+}
+
+.button {
+    padding: 20px;
+}
+
+.button1 {
+    width: 190px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #432b87;
+    margin-left: 2rem;
+}
+
+.app {
+    padding: 20px;
+    height: 280px;
+    background-color: #fafafa;
+}
+
+.download-app {
+    margin-top: 4rem;
+}
+
+.button2 {
+    margin-top: 8rem;
+    margin-left: 14rem;
+}
+
+.button3 {
+    background-color: #73c700;
+    color: white;
+}
+
+.footer {
+    padding: 100px;
+}
+
+
+/*  */

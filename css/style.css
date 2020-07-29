@@ -1,0 +1,1293 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: rubik;
+    src: url('../font/Rubik-Regular.ttf');
+}
+@font-face {
+    font-family: roboto;
+    src: url('../font/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: poppins;
+    src: url('../font/Poppins-Regular.ttf');
+}
+body {
+    overflow-x: hidden;
+}
+
+/* header */
+/* nav */
+nav {
+    width: 100%;
+    z-index: 999;
+    font-family: roboto;
+    transition: all ease-in-out .3s;
+}
+nav ul {
+    list-style: none;
+}
+.nav-shadow {
+    box-shadow: 0px 5px 20px rgb(0,0,0,0.1);
+}
+.nav-point {
+    width: 40%;
+    box-sizing: border-box;
+}
+.nav-point1 {
+    width: 60%;
+    box-sizing: border-box;
+}
+.toggles, .toggles-close {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 7px;
+    right: 20px;
+    background-color: #296ec7;
+    border-radius: 50px;
+    display: none;
+}
+.menubar {
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+nav ul li {
+    cursor: pointer;
+}
+#line1 {
+    position: absolute;
+    top: 18px;
+    transform: rotate(45deg);
+}
+#line2 {
+    position: absolute;
+    top: 18px;
+    transform: rotate(-45deg);
+}
+.menubar-li input[type="text"]{
+    width: 70%;
+}
+#search-btn {
+    position: absolute;
+    right: 0;
+    top: 3px;
+}
+#search {
+    width: 80%;
+    border-radius: 20px;
+    border: none;
+    background: rgb(233, 233, 233);
+    position: relative;
+    top: 0px;
+    font-size: 13px;
+}
+@media only screen and (max-width: 1100px) {
+    .toggles, .toggles-close {
+        display: block;
+    }
+    .nav-flex {
+        display: block;
+    }
+    #menubar-point {
+        display: none;
+    }
+    .nav-point1,
+    .nav-point,
+    .menubar-li,
+    .menubar {
+        width: 100% !important;
+        display: inline-block;
+    }
+    #home-nav {
+        margin-top: 60px;
+    }
+    .menubar-li {
+        width: 20%;
+        position: relative;
+        text-align: center;
+        height: 35px;
+        margin: 30px 0px;
+    }
+    .login, login-down {
+        margin-bottom: 60px;
+    }
+}
+.line {
+    position: relative;
+    margin: 5px 0px;
+    width: 50%;
+    top: 20%;
+    left: 25%;
+    height: 3px;
+    background-color: black;
+}
+.menubar-li {
+    width: 15%;
+    position: relative;
+    text-align: center;
+}
+.menubar-li a {
+    color: white;
+}
+.menubar-li a:hover {
+    text-decoration: none;
+}
+.menubar-li::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    background-color: #ffd700;
+    bottom: 10px;
+    left: 35%;
+    transition: all ease-in-out .3s;
+}
+.active::after {
+    content: '';
+    width: 30%;
+    height: 3px;
+    position: absolute;
+    background-color: #ffd700;
+    bottom: 10px;
+    left: 35%;
+}
+.menubar-li:hover::after {
+    content: '';
+    width: 30%;
+    height: 3px;
+    position: absolute;
+    background-color: #ffd700;
+    bottom: 10px;
+    left: 35%;
+}
+.login {
+    padding: 5px 35px;
+    display: inline-block;
+    background-color: transparent;
+    position: relative;
+    top: -5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition: all ease-in-out .3s;
+    border: 2px solid white;
+}
+.login-down {
+    padding: 5px 35px;
+    display: inline-block;
+    background-color: transparent;
+    position: relative;
+    top: -5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition: all ease-in-out .3s;
+    border: 2px solid black;
+}
+.login:hover, .login-down:hover {
+    background-color: #ffd700;
+}
+
+/* /.nav */
+/* /.header */
+
+/* parallax */
+.par {
+    width: 100%;
+    height: 550px;
+    background-image: url('../img/data img/edukasi1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    position: relative;
+}
+.deskripsi-par {
+    position: relative;
+    top: 30%;
+    width: 50%;
+    left: 25%;
+}
+.deskripsi-par h3 {
+    color: #4392fa;
+}
+.par-search {
+    width: 80%;
+    min-height: 40px;
+    background: white;
+    position: absolute;
+    overflow: hidden;
+    left: 10%;
+}
+#par-cari {
+    width: 80% !important;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    left: 0;
+    transition: all ease-in .3s;
+}
+#par-btn-cari {
+    width: 20% !important;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    border: none;
+    background-color: #4392fa;
+    color: white;
+}
+
+@media only screen and (max-width: 650px) {
+    .deskripsi-par {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        left: 0;
+    }   
+}
+.deskripsi-par p {
+    padding-top: 10px;
+}
+/* /.parallax */
+
+/* content1 */
+
+.list-jenjang {
+    padding: 20px 10px 5px 10px;
+    margin: 0px 0px 10px 0px;
+    transition: all ease-   in-out .3s;
+    background-color: rgb(255, 255, 255);
+    color: #4392fa;
+    font-weight: bold;
+}
+.list-jenjang:hover {
+    background-color: #4392fa;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.list-aktif {
+    background-color: #4392fa;
+    color: white;
+    font-weight: bold;
+}
+.point-artikel {
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgb(0,0,0,0.1);
+    position: relative;
+    margin: 15px;
+    min-height: 280px;
+    transition: all ease-in .3s;
+}
+.point-artikel:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgb(0,0,0,0.1);
+}
+.img-point {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    background-color: black;
+}
+.img-point img {
+    transition: all ease-in .3s;
+}
+.img-point img:hover {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+.tambahan-point {
+    position: absolute;
+    font-size: 12px;
+    bottom: 10px;
+    right: 10px;
+}
+.tambahan-point svg {
+    color: #4392fa;
+}
+#smp, #sma, #smk {
+    display: none;
+}
+/* content1 */
+
+/* .slider */
+.slide {
+    width: 50%;
+    background-color: white;
+    box-sizing: border-box;
+    transition: all ease-in-out .3s;
+}
+.img-slide {
+    width: 100%;
+    height: 130px;
+    background-color: #000000;
+    background-size: cover;
+    overflow: hidden;
+}
+.img-slide img {
+    transition: all ease-in .3s;
+}
+.img-slide:hover img {
+    transform: scale(1.1);
+    opacity: 0.6;
+}
+.des-slide {
+    background-color: white;
+    position: relative;
+}
+.kriteria-slide {
+    box-sizing: border-box;
+    background-color: #4392fa;
+    position: absolute;
+    color: white;
+    top: -50px;
+    border-right: 3px solid #296ec7;
+}
+.slide h3 {
+    position: relative;
+    padding: 15px 0px 10px 0px;
+    transition: all ease-in-out .3s;
+}
+.pilih {
+    background-color: #ffd700;
+    color: white;
+    padding: 5px 20px;
+    font-weight: bold;
+    transition: all ease-in-out .4s;
+}
+.pilih:hover {
+    box-shadow: 0px 0px 10px rgb(0,0,0,0.3);
+}
+.par-mid {
+    background-image: url('../img/data img/edukasi4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    position: relative;
+}
+.overlay-mid {
+    opacity: 0.6;
+    width: 100%;
+    height: 800px;
+    background-color: #000000;
+    position: absolute;
+}
+/* slick custom */
+.slick-slide {
+    box-sizing: border-box;
+    margin: 25px 20px 25px 20px;
+}
+.terpopuler {
+    width: 100%;
+    background-color: white;
+    position: relative;
+    /* box-shadow: 0px 0px 20px rgb(0,0,0,0.1); */
+}
+.deskripsi-terpopuler {
+    z-index: 10;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+}
+.deskripsi-terpopuler:hover ~ .gambar {
+    transform: scale(1.1);
+    opacity: 0.4;
+}
+/* /.slick custom */
+/* /.slider */
+
+/* .terpopuler */
+.gambar {
+    height: 100%;
+}
+.img-terpopuler {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+    border-radius: 10px;
+}
+.img-terpopuler img {
+    width: 100%;
+    background-size: cover;
+    transition: all ease-in-out .3s;
+    opacity: 0.7;
+}
+.img-terpopuler img:hover {
+    transform: scale(1.1);
+    opacity: 0.4;
+}
+.btn-pelajari {
+    background-color: #ffd700;
+    padding: 7px 35px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+.list-terpopuler {
+    width: 100%;
+    height: 450px;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* box-shadow: 0px 0px 20px rgb(0,0,0,0.1); */
+}
+.point-populer {
+    width: 100%;
+    background: white;
+    height: 130px;
+    margin: 10px 0px 20px 0px;
+}
+.icon-point {
+    width: 35%;
+    height: 100px;
+    background-color: #4392fa;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.deskripsi-point {
+    padding-top: 6px;
+    width: 90%;
+    box-sizing: border-box;
+    position: relative;
+}
+.deskripsi-point p {
+    font-size: 13px;
+}
+.btn-pelajari_small {
+    background-color: #ffd700;
+    padding: 2px 15px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    position: absolute;
+    right: 10px;
+}
+.kriteria {
+    background-color:#4392fa;
+    display: none;
+    width: 40%;
+    padding: 15px 5px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    text-align: center;
+    border-right: 3px solid #296ec7;
+    z-index: 10;
+    /* font-weight: bold; */
+}
+.kriteria:hover + .gambar {
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+/* /.terpopuler */
+
+/* parrallax bottom */
+.par-bot {
+    width: 100%;
+    height: 400px;
+    /* overflow: hidden; */
+    background-color: black;
+    position: relative;
+}
+.img-par-bot {
+    width: 100%;
+    height: 400px;
+    background-image: url('../img/data img/edukasi.jpg');
+    background-size: cover;
+    opacity: 0.5;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+}
+.deskripsi-par-bot {
+    z-index: 10;
+    position: relative;
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+.slider-par-bot {
+    width: 80%;
+    z-index: 10;
+    position: relative;
+    top: 0px;
+    left: 10%;
+
+}
+.icon-footer {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 100px;
+    background-image: url('../img/pengembang/khusnul.JPG');
+    background-size: 300%;
+    background-position-x: -95px;
+    background-position-y: -30px;
+    box-shadow: 0px 20px 50px rgb(0,0,0,0.4);
+    animation-name: gantigambar;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-delay: 10s;
+}
+@keyframes gantigambar {
+    0% { background-image: url('../img/pengembang/khusnul.JPG') }
+    50% { background-image: url('../img/pengembang/ninno.JPG') }
+}
+#hub-footer svg {
+    margin: 0 10px;
+    transition: all ease-in .3s;
+    font-size: 20px;
+}
+#hub-footer svg:hover {
+    color: gray;
+    cursor: pointer;
+}
+.footer .col-lg-4 {
+    margin-bottom: 50px;
+}
+/* /.parrallax bottom */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* login */
+
+.bodi-login {
+    background-image: url('../img/data img/edukasi4.jpg');
+    background-size: cover;
+    height: 100%;
+    /* overflow: hidden; */
+}
+.overlay-login {
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    position: absolute;
+}
+.login-page {
+    position: relative;
+    overflow: hidden;   
+    box-shadow: 0px 0px 40px rgb(0,0,0,0.1);
+}
+.form-login input[type="text"],
+.form-login input[type="password"],
+.form-login input[type="email"],
+select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid gainsboro !important;
+    /* border-radius: 10px;     */
+    background-color: rgb(248, 248, 248);
+}
+.form-login {
+    width: 90%;
+    position: relative;
+    left: 5%;
+    text-align: left;
+}
+.form-login ul {
+    list-style: none;
+}
+.btn-login {
+    background-color: #4392fa !important;
+    border-bottom: 5px solid #2565b9;
+} .btn-login:active {
+    transform: translateY(4px);
+    border-bottom: 1px solid #2565b9;
+}
+.other-sign svg {
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 25px;
+    transition: all ease-in .3s;
+    padding: 5px;
+    border-radius: 3px;
+}
+.other-sign svg:hover {
+    background-color: gainsboro;
+}
+.other-sign .fa-facebook {
+    color: #2565b9;
+}
+.other-sign .fa-twitter {
+    color: #4392fa;
+}
+.other-sign .fa-google {
+    color: #ec4a4a;
+}
+
+/* /login */
+
+
+
+
+
+
+
+
+
+/* .daftar */
+
+.par-daftar {
+    width: 100%;
+    height: 300px;
+    background-image: url('../img/data img/edukasi.jpg');
+    background-size: cover;
+    /* background-position-y: -200px; */
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+}
+@media only screen and (max-width: 950px) {
+    .daftar {
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+    }
+}
+
+/* /.daftar */
+
+
+
+
+
+/* .konfirm */
+
+.upload input[type="file"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid gainsboro !important;
+    /* border-radius: 10px;     */
+    background-color: rgb(248, 248, 248);
+}
+.aktif-konfirm {
+    background-color:#296ec7 !important;
+    color: white;
+}
+.aktif-konfirm svg {
+    color: #ffd700 !important;
+}
+.my-menu {
+    transition: all ease .3s;
+}
+.my-menu:hover {
+    background-color:#4392fa !important;
+    color: white;
+    cursor: pointer;
+}
+/* /.konfirm */
+
+
+
+
+
+/* whatyou */
+
+.whatyou-input {
+    width: 100%;
+    box-sizing: border-box;
+    /* padding: 10px 20px; */
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgb(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+.whatyou-input input{
+    width: 90%;
+    border: none;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+}
+.favorit {
+    width: 100%;
+    padding: 20px;
+    background-image: url('../img/data img/biollogy3.jpg');
+    background-size: cover;
+    border-radius: 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0px;
+    transition: all ease .3s;
+}
+.favorit input[type="checkbox"] {
+    border: none !important;
+    background: #2565b9 !important;
+}
+.overlay-favorit {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+}
+.favorit h3 {
+    position: relative;
+    transition: all ease .3s;
+}
+.favorit:hover h3 {
+    padding-left: 20px;
+}
+
+/* /whatyou */
+
+
+
+
+
+
+
+/* user */
+
+.sampul {
+    height: 450px;
+    background-image: url('../img/data img/edukasi.jpg');
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+.pp {
+    width: 150px;
+    height: 150px;
+    background-color: black;
+    border-radius: 150px;
+    display: inline-block;
+    position: relative;
+    top: 120px; 
+    overflow: hidden;   
+    border: 2px solid white;
+    transition: all ease .3s;
+    text-align: center;
+}
+.pp p {
+    width: 100%;
+    position: absolute;
+    top: 46%;
+    display: none;
+    z-index: 10;
+    font-weight: bold;
+}
+.pp img {
+    transition: all ease .3s;
+}
+.pp:hover img {
+    opacity: 0.4;
+    cursor: pointer;
+}
+.pp:hover p {
+    display: inline;
+    cursor: pointer;
+}
+.name-pp {
+    display: inline-block;
+    position: relative;
+    top: 120px; 
+    overflow: hidden;   
+    color: white;
+    text-align: left !important;
+    transition: all ease .3s;
+    text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+    .name-pp {
+        text-align: center !important;
+    }
+    .btns {
+        width: 100%;
+        text-align: center;
+        display: inline-block !important;
+    }
+}
+
+.point6 {
+    width: 100%;
+    background-color: #2565b9;
+}
+/* /user */
+
+.slider-list {
+    width: 100%;
+    height: 200px !important;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+#sd-list {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('../img/sekolah dasae.jpg') !important;
+    background-size: cover;
+}
+
+#overlay-sd {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.4;
+    background-image: linear-gradient(to right, rgb(255, 217, 0), #ff3d3d)
+}
+
+#smp-list {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('../img/smp.png') !important;
+    background-size: cover;
+}
+
+#overlay-smp {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.4;
+    background-image: linear-gradient(to right, rgb(0, 217, 255), #3d40ff)
+}
+
+#smk-list {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('../img/KEJURUAN.jpg') !important;
+    background-size: cover;
+}
+
+#overlay-smk {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.4;
+    background-image: linear-gradient(to right, rgb(94, 223, 246), #3da8ff)
+}
+
+#sma-list {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('../img/sma.jpg') !important;
+    background-size: cover;
+}
+
+#overlay-sma {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.4;
+    background-image: linear-gradient(to right, rgb(94, 223, 246), #3da8ff)
+}
+
+.title-list {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    position: absolute;
+    color: white;
+    padding: 10px 20px;
+}
+
+#title-sd {
+    background-image: linear-gradient(to right, transparent, #ff3d3d);
+}
+
+#title-smp {
+    background-image: linear-gradient(to right, transparent, #3d40ff);
+}
+
+#title-sma {
+    background-image: linear-gradient(to right, transparent, #3d98ff);
+}
+#title-smk {
+    background-image: linear-gradient(to right, transparent, #0adbca);
+}
+
+.wadah-list {
+    background-color: #ffd700;
+}
+
+.listku {
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px 0px;
+    color: black;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    transition: all ease-in-out .3s;
+}
+.listku h5 {
+    margin: 0;
+}
+.listku:hover {
+    margin-left: 20px;
+    transition: all ease-in-out .3s;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.listku:active {
+    position: relative;
+    left: 50px;
+}
+.pilih-search {
+    width: 100%;
+    padding: 100px;
+    color: white;
+    background-image: url('../img/data img/biollogy4.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: 20px 0px;
+    position: relative;
+}
+.list-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    height: 100%;
+}
+
+.search-list {
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    top: 75px;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+}
+.keyword-list {
+    width: 80%;
+    height: 50px;
+    background-color: #ffffff;
+    border: none;
+    padding: 0px 20px;
+}
+.btn-search-list {
+    width: 20%;
+    background-color: #296ec7;
+    border-radius: 0px !important;
+    color: white;
+}
+.kotak-test {
+    width: 100%;
+    padding: 40px 0px;
+    box-shadow: 0px 10px 15px rgb(0,0,0,0.1);
+    transition: all ease .3s;
+    background-color: white;
+    height: 400px;
+    border-top: 4px solid #4392fa;
+    position: relative;
+    overflow: hidden;
+}
+.kotak-test::after {
+    content: '';
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    background-color: #4392fa;
+    transition: all ease-in-out .3s;
+}
+.kotak-test:hover::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    background-color: #4392fa;
+}
+.deskripsi-kotak {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.icon-test {
+    width: 70px;
+    height: 70px;
+    position: relative;
+    text-align: center;
+    margin: 0px 0px 70px 0px;   
+    background: white;
+    box-sizing: border-box;
+    border-radius: 70px;
+}
+.icon-test h1 {
+    line-height: 70px;
+}
+.kotak-test:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 30px rgb(0,0,0,0.1);
+}
+.hai-test {
+    width: 100%;
+    padding: 50px;
+    box-shadow: 0px 0px 20px rgb(0,0,0,0.1);
+    border-radius: 20px;
+    position: relative;
+    top: 5%;
+    background-color: white;
+}
+.hai1-test {
+    width: 70%;
+    padding: 10px 40px;
+    margin: 20px 0px;
+    box-shadow: 0px 0px 20px rgba(65, 65, 65, 0.1);
+    /* border-radius: 20px; */
+    position: relative;
+    top: 7%;
+    transition: all ease-in-out .3s;
+    left: 15%;
+    background-color: white;
+    /* border-bottom: 2px solid #4392fa; */
+}
+.hai1-test:hover {
+    transform: scale(1.05);
+}
+.hai1-test::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    background-color: #4392fa;
+    bottom: 0px;
+    left: 0px;
+    transition: all ease-in .3s;
+}
+.hai1-test:hover::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    background-color: #ffd700;
+    bottom: 0px;
+    left: 0px;
+    transition: all ease-in .3s;
+}
+
+
+
+
+/* soal */
+
+.isi-soal {
+    box-shadow: 0px 10px 20px rgb(0,0,0,0.1);
+}
+.isi-jawab {
+    box-shadow: 0px 2px 10px rgb(0,0,0,0.1);
+    transition: all ease .3s;
+    box-sizing: border-box;
+    padding: 30px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.isi-jawab:hover {
+    box-shadow: 0px 5px 20px rgb(0,0,0,0.1);
+}
+.jawab {
+    z-index: 10;
+    color: black;
+    position: absolute;
+    top: 30%;
+}
+.isi-jawab::after {
+    content: '';
+    background-color: #4392fa;
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    top: 0;
+    transition: all ease .7s;
+}
+.isi-jawab:hover::after {
+    content: '';
+    background-color: #ffd700;
+    width: 120%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    z-index: 0;
+    top: 0;
+}
+.modalku {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0,0.5);
+    z-index: 90;
+}
+.modal-content {
+    position: fixed;
+    width: 80%;
+    padding: 100px;
+    left: 10%;
+    box-sizing: border-box;
+    background-color: #4392fa;
+    top: 30%;
+    color: white;
+    text-align: center;
+}
+
+/* endsoal */
+
+/* pelajaran */
+
+.komentar {
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(49, 49, 49, 0.1);
+    border-radius: 10px;
+    margin: 0px 15px;
+}
+.komentar input[type="text"], 
+.komentar textarea {
+    width: 90%;
+    border: none;
+    position: relative;
+    left: 5%;
+    display: inline-block;
+    background-color: rgb(241, 241, 241);
+    font-size: 16px;
+    border-radius: 10px;
+}
+.whatnext {
+    width: 100%;
+    background-color: #2565b9;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+.overlay-whatnext {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+#overlay-test {
+    background-image: linear-gradient(to right, #32aafa, #e332fa );
+    opacity: 0.4;
+    transition: all ease .3s;
+}
+.whatnext:hover #overlay-test {
+    background-image: linear-gradient(to right, #32aafa, #e332fa );
+    opacity: 1;
+}
+#overlay-lanjut {
+    background-image: linear-gradient(to right, #e332fa, #fa3232 );
+    opacity: 0.4;
+    transition: all ease .3s;
+}
+.whatnext:hover #overlay-lanjut {
+    background-image: linear-gradient(to right, #e332fa, #fa3232 );
+    opacity: 1;
+}
+#test {
+    background-image: url('../img/data img/edukasi.jpg');
+    background-size: cover;
+    /* background-attachment: fixed; */
+}
+
+#lanjut {
+    background-image: url('../img/data img/edukasi3.jpg');
+    background-size: cover;
+    /* background-attachment: fixed; */
+}
+.whatnext h2 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transition: all ease-in .3s;
+}
+.whatnext:hover h2 {
+    margin-left: 50px;
+}
+.icon-komentar {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background-color: #4932fa;
+}
+.icon-komentar-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #4932fa;
+}
+#like {
+    position: relative;
+    overflow: hidden;
+}
+.status {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.liked {
+    color: #ffd700;
+}
+/* .title-whatnext {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+} */
+/* endpelajaran */
